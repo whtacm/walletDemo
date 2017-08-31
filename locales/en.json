@@ -1,0 +1,10 @@
+{
+  "app": "eWallet",
+  "splash": {
+  },
+  "hometab": {
+    "home": "Home",
+    "find": "Find",
+    "me": "Me"
+  }
+}
