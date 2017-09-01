@@ -6,22 +6,23 @@ import {
     StatusBar,
 } from 'react-native';
 import BaseComponent from  '../base/BaseComponent';
-import theme from '../../theme'
+import TTStatusBar from '../../component/statusbar'
 
 export default class HomePage extends BaseComponent {
     constructor(props) {
         super(props)
+        this.state = {
+            translucent: true,
+            hidden: false,
+        }
     }
 
     render() {
         return (
             <View style={styles.container}>
-                <StatusBar
-                    hidden={false}
-                    translucent={false}
-                    backgroundColor={theme.statusbar.backgroundColor}
-                    barStyle="light-content"
-                />
+                <TTStatusBar
+                    hidden={this.state.hidden}
+                    translucent={this.state.translucent}/>
                 <Text style={styles.welcome}>HomePage</Text>
             </View>
         );

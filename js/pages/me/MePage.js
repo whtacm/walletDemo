@@ -3,29 +3,59 @@ import {
     StyleSheet,
     View,
     Text,
-    StatusBar,
 } from 'react-native';
 import BaseComponent from  '../base/BaseComponent';
+import TTStatusBar from '../../component/statusbar'
 
 export default class MePage extends BaseComponent {
     constructor(props) {
-        super(props)
+        super(props);
+        console.log('constructor')
+        this.state = {
+            translucent: false,
+        }
     }
+
+    static ons = function () {
+
+    };
 
     render() {
         return (
             <View style={styles.container}>
+                <TTStatusBar
+                    translucent={this.state.translucent}/>
                 <Text style={styles.welcome}>MePage</Text>
             </View>
         );
     }
 
+    componentWillMount() {
+        console.log('componentWillMount')
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log('componentWillReceiveProps', nextProps)
+    }
+
+    shouldComponentUpdate() {
+        console.log('shouldComponentUpdate')
+    }
+
+    componentWillUpdate() {
+        console.log('componentWillUpdate')
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate')
+    }
+
     componentDidMount() {
-        console.log('mount')
+        console.log('componentDidMount')
     }
 
     componentWillUnmount() {
-        console.log('unmount')
+        console.log('componentWillUnmount')
     }
 
 
