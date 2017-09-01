@@ -2,19 +2,15 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     View,
-    Text
+    Text,
+    StatusBar,
 } from 'react-native';
 import BaseComponent from  '../base/BaseComponent';
 
-export default class HomePage extends BaseComponent {
-    constructor(props){
+export default class MePage extends BaseComponent {
+    constructor(props) {
         super(props)
     }
-
-    static navigationOptions = {
-        title: 'Me',
-        headerMode: 'screen',
-    };
 
     render() {
         return (
@@ -25,11 +21,11 @@ export default class HomePage extends BaseComponent {
     }
 
     componentDidMount() {
-
+        console.log('mount')
     }
 
-    componentWillUnmount(){
-
+    componentWillUnmount() {
+        console.log('unmount')
     }
 
 

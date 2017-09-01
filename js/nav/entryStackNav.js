@@ -1,8 +1,8 @@
 import {StackNavigator} from 'react-navigation'
-import HomeNav from  './homeNav'
+import HomeTabNav from  './homeTabNav'
 import Entry from  '../entry'
 
-export default EntryNav = new StackNavigator({
+export default EntryStackNav = new StackNavigator({
     EntryPage: {
         screen: Entry,
         navigationOptions: {
@@ -10,8 +10,8 @@ export default EntryNav = new StackNavigator({
             navigationBarHidden: true,
         },
     },
-    HomePage: {
-        screen: HomeNav,
+    HomeTabNav: {
+        screen: HomeTabNav,
         path: 'app/home', //使用url导航时用到, 如 web app 和 Deep Linking
         navigationOptions: {
             headerMode: 'screen',

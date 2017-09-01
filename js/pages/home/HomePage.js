@@ -2,34 +2,37 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     View,
-    Text
+    Text,
+    StatusBar,
 } from 'react-native';
 import BaseComponent from  '../base/BaseComponent';
+import theme from '../../theme'
 
 export default class HomePage extends BaseComponent {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
-
-    static navigationOptions = {
-        title: 'Home',
-        headerMode: 'screen',
-    };
 
     render() {
         return (
             <View style={styles.container}>
+                <StatusBar
+                    hidden={false}
+                    translucent={false}
+                    backgroundColor={theme.statusbar.backgroundColor}
+                    barStyle="light-content"
+                />
                 <Text style={styles.welcome}>HomePage</Text>
             </View>
         );
     }
 
     componentDidMount() {
-
+        console.log('mount')
     }
 
-    componentWillUnmount(){
-
+    componentWillUnmount() {
+        console.log('unmount')
     }
 
 

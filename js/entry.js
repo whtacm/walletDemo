@@ -32,7 +32,12 @@ export default class wallet extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>xxxx</Text>
+                <StatusBar
+                    hidden={true}
+                    translucent={true}
+                    barStyle="light-content"
+                />
+                <Text style={styles.welcome}>{global.i18n.t('app')}</Text>
                 <Text style={styles.instructions}>sadfasdfasdfasdfsa</Text>
             </View>
         );
@@ -63,7 +68,8 @@ export default class wallet extends Component {
             global.i18n.locale = ret;
         }).catch(err => {
             console.log(err);
-            global.i18n.locale='en';
+            global.i18n.locale='zh';
+            console.log(global.i18n.t('hometab.home'))
         })
     }
 
@@ -77,8 +83,8 @@ export default class wallet extends Component {
 
             const {navigate} = this.props.navigation;
             setTimeout(function () {
-                navigate('HomePage');
-            }, 1500)
+                navigate('HomeTabNav');
+            }, 100)
 
         }).catch(err => {
             console.log(err)

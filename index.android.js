@@ -8,6 +8,6 @@ import React, {Component} from 'react';
 import {
     AppRegistry,
 } from 'react-native';
-import EntryNav from './js/nav/entryNav'
+import EntryStackNav from './js/nav/entryStackNav'
 
-AppRegistry.registerComponent('wallet', () => EntryNav);
+AppRegistry.registerComponent('wallet', () => EntryStackNav);
